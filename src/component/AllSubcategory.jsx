@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllSubcategory = ({ Subcategory }) => {
-  const { image, subcategory_Name, origins, key_elements } = Subcategory;
+  const { image, subcategory_Name, origins, key_elements, _id } = Subcategory;
+
   return (
-    <div className="card card-compact lg:w-96 h-96 bg-base-100 shadow-xl">
+    <Link
+      to={`/Subcategory/${_id}`}
+      className="card card-compact lg:w-96 h-96 bg-base-100 shadow-xl"
+    >
       <figure>
         <img src={image} alt="Shoes" />
       </figure>
@@ -15,7 +20,7 @@ const AllSubcategory = ({ Subcategory }) => {
           <button className="btn">view</button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

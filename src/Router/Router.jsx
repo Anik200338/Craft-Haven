@@ -10,6 +10,7 @@ import Singlecraft from '../component/Singlecraft';
 import PrivateRoute from '../component/PrivateRoute/PrivateRoute';
 import Mycraft from '../component/Mycraft';
 import Update from '../component/Update&delete/Update';
+import SingleSub from '../component/SingleSub';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: '/Update/:id',
         element: <Update></Update>,
+      },
+      {
+        path: '/Subcategory/:id',
+        element: <SingleSub></SingleSub>,
       },
       {
         path: '/register',
