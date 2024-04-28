@@ -4,18 +4,16 @@ import { AuthContext } from './AuthProvider/AuthProvider';
 
 const Navbar = () => {
   const { logout, user } = useContext(AuthContext);
-  const [theme, settheme] = useState('light');
+  const [theme, settheme] = useState(
+    () => localStorage.getItem('theme') || 'light'
+  );
   useEffect(() => {
     localStorage.setItem('theme', theme);
-    const localtheme = localStorage.getItem('theme');
-    document.querySelector('html').setAttribute('data-theme', localtheme);
+    document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
   const handleToggle = e => {
-    if (e.target.checked) {
-      settheme('dark');
-    } else {
-      settheme('light');
-    }
+    const newTheme = e.target.checked ? 'dark' : 'light';
+    settheme(newTheme);
   };
 
   const navlink = (
@@ -128,6 +126,7 @@ const Navbar = () => {
             onChange={handleToggle}
             type="checkbox"
             className="theme-controller"
+            checked={theme === 'dark'}
           />
 
           {/* sun icon */}
