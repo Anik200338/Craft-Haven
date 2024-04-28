@@ -94,13 +94,21 @@ const AddCraft = () => {
             <label className="label">
               <span className="label-text">Subcategory Name</span>
             </label>
-            <label className="input-group">
-              <input
-                type="text"
+            <label className="">
+              <select
                 name="subcategory_Name"
-                placeholder="Subcategory Name"
-                className="input input-bordered w-full"
-              />
+                className="select select-bordered w-full"
+              >
+                <option value="">Select Subcategory</option>
+                <option value="Landscape Painting">Landscape Painting</option>
+                <option value="Portrait Drawing">Portrait Drawing</option>
+                <option value="Watercolour Painting">
+                  Watercolour Painting
+                </option>
+                <option value="Oil Painting">Oil Painting</option>
+                <option value="Charcoal Sketching">Charcoal Sketching</option>
+                <option value="Cartoon Drawing">Cartoon Drawing</option>
+              </select>
             </label>
           </div>
           <div className="form-control md:w-1/2 ml-4">
