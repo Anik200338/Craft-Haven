@@ -29,8 +29,12 @@ const router = createBrowserRouter([
 
           const craftsResponse = await fetch('http://localhost:5000/AddCraft');
           const crafts = await craftsResponse.json();
+          const AddSubcategory = await fetch(
+            'http://localhost:5000/Subcategory'
+          );
+          const Subcategorys = await AddSubcategory.json();
 
-          return { fakeData, crafts };
+          return { fakeData, crafts, Subcategorys };
         },
       },
       {
