@@ -37,13 +37,13 @@ const Login = () => {
 
   return (
     <div className="">
-      <div className="hero min-h-screen bg-[url('https://i.ibb.co/S33k9CX/6528594-3324136.jpg')] rounded-3xl  w-full mb-20">
+      <div className="hero min-h-screen bg-[url('https://i.ibb.co/wzLs0gK/data-security-threat.png')] rounded-3xl  w-full mb-20">
         <div className="hero-content flex-col lg:flex rounded-2xl w-3/4">
-          <div className="text-center lg:text-left">
+          <div className="text-center  lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
           </div>
           <div
-            className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+            className="card shrink-0 w-full max-w-sm shadow-2xl bg-transparent border-2 border-blue-200"
             data-aos="flip-left"
           >
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
@@ -54,7 +54,7 @@ const Login = () => {
                 <input
                   type="email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered border-info "
                   {...register('email', { required: true })}
                 />
                 {errors.email && <span>This field is required</span>}
@@ -66,7 +66,7 @@ const Login = () => {
                 <input
                   type={showPassword ? 'text' : 'password'}
                   placeholder="password"
-                  className="input input-bordered"
+                  className="input input-bordered border-info "
                   {...register('password', { required: true })}
                 />
                 <span
@@ -78,11 +78,11 @@ const Login = () => {
                 {errors.password && <span>This field is required</span>}
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-accent">Login</button>
+                <button className="btn btn-info">Login</button>
               </div>
               <p className="text-center">
-                dont have an account{' '}
-                <Link to="/register" className="text-[#6dd79f]">
+                Dont have an account{' '}
+                <Link to="/register" className="text-info ">
                   Register
                 </Link>{' '}
               </p>

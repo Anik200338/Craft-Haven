@@ -33,13 +33,13 @@ const SocialLogin = () => {
       <div className="flex justify-center gap-5">
         <button
           onClick={() => handleSocialLogin(googleLogin)}
-          className="btn btn-accent  rounded-full btn-outline text-lg"
+          className="btn btn-info  rounded-full btn-outline text-lg"
         >
           <FaGoogle />{' '}
         </button>
         <button
           onClick={() => handleSocialLogin(githubLogin)}
-          className="btn btn-accent  btn-outline rounded-full text-lg"
+          className="btn btn-info  btn-outline rounded-full text-lg"
         >
           <FaGithub />{' '}
         </button>

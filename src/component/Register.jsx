@@ -48,13 +48,13 @@ const Register = () => {
   };
   return (
     <div>
-      <div className="hero min-h-screen bg-[url('https://i.ibb.co/S33k9CX/6528594-3324136.jpg')] rounded-3xl  w-full mb-20">
+      <div className="hero min-h-screen bg-[url('https://i.ibb.co/b60WJLZ/data-security-threat-1.png')] rounded-3xl  w-full mb-20">
         <div className="hero-content flex-col lg:flex w-3/4">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Register now!</h1>
           </div>
           <div
-            className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+            className="card shrink-0 w-full max-w-sm shadow-2xl bg-transparent border-2 border-blue-200"
             data-aos="flip-left"
           >
             <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
@@ -65,7 +65,7 @@ const Register = () => {
                 <input
                   type="text"
                   placeholder="FUll name"
-                  className="input input-bordered"
+                  className="input input-bordered border-info "
                   {...register('fullname', { required: true })}
                 />
                 {errors.fullname && <span>This field is required</span>}
@@ -77,7 +77,7 @@ const Register = () => {
                 <input
                   type="text"
                   placeholder="Photo URl"
-                  className="input input-bordered"
+                  className="input input-bordered border-info "
                   {...register('Photo', { required: true })}
                 />
               </div>
@@ -88,19 +88,19 @@ const Register = () => {
                 <input
                   type="email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered border-info "
                   {...register('email', { required: true })}
                 />
                 {errors.email && <span>This field is required</span>}
               </div>
               <div className="form-control relative">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text ">Password</span>
                 </label>
                 <input
                   type={showPassword ? 'text' : 'password'}
                   placeholder="password"
-                  className="input input-bordered"
+                  className="input input-bordered border-info "
                   {...register('password', { required: true })}
                 />
                 <span
@@ -112,11 +112,11 @@ const Register = () => {
                 {errors.password && <span>This field is required</span>}
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-accent">Register</button>
+                <button className="btn btn-info">Register</button>
               </div>
               <p className="text-center">
                 you have an account{' '}
-                <Link to="/login" className="text-[#6dd79f]">
+                <Link to="/login" className="text-info">
                   Login
                 </Link>{' '}
               </p>

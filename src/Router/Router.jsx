@@ -60,7 +60,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/myArt',
-        element: <Mycraft></Mycraft>,
+        element: (
+          <PrivateRoute>
+            <Mycraft></Mycraft>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/allCraft',
@@ -69,7 +73,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/addCraft',
-        element: <AddCraft></AddCraft>,
+        element: (
+          <PrivateRoute>
+            <AddCraft></AddCraft>
+          </PrivateRoute>
+        ),
       },
     ],
   },

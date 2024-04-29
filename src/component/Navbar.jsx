@@ -107,6 +107,16 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navlink}
+            <Link to="/login">
+              <button className="btn btn-sm  btn-ghost text- lg:text-lg font-bold ">
+                Login
+              </button>
+            </Link>
+            <Link to="/register">
+              <button className="btn btn-sm  btn-ghost lg:text-lg font-bold ">
+                Register
+              </button>
+            </Link>
           </ul>
         </div>
         <Link
@@ -123,7 +133,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <label className="swap swap-rotate pr-5">
+        <label className="swap swap-rotate lg:pr-5">
           {/* this hidden checkbox controls the state */}
           <input
             onChange={handleToggle}
@@ -157,7 +167,7 @@ const Navbar = () => {
           >
             <button>
               {' '}
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-hover dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-16 rounded-full ">
                     <img
@@ -190,11 +200,18 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <Link to="/login">
-            <button className="btn btn-sm  btn-ghost text-lg font-bold ">
-              Login
-            </button>
-          </Link>
+          <>
+            <Link to="/login" className=" hidden lg:flex">
+              <button className="btn btn-sm  btn-ghost text- lg:text-lg font-bold ">
+                Login
+              </button>
+            </Link>
+            <Link to="/register" className="hidden lg:flex">
+              <button className="btn btn-sm  btn-ghost lg:text-lg font-bold ">
+                Register
+              </button>
+            </Link>
+          </>
         )}
       </div>
     </div>
