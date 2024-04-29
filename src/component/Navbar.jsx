@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from './AuthProvider/AuthProvider';
+import Lottie from 'lottie-react';
+import craft from '../assets/Animation - 1714351107430.json';
 
 const Navbar = () => {
   const { logout, user } = useContext(AuthContext);
@@ -23,7 +25,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? 'font-bold text-lg  border-2 border-[#6dd79f] rounded-xl'
+              ? 'font-semibold text-lg  border-2 border-blue-200   rounded-xl'
               : ' text-lg'
           }
         >
@@ -35,7 +37,7 @@ const Navbar = () => {
           to="/allCraft"
           className={({ isActive }) =>
             isActive
-              ? 'font-bold text-lg  border-2 border-[#6dd79f] rounded-xl'
+              ? 'font-semibold text-lg  border-2 border-blue-200   rounded-xl'
               : ' text-lg'
           }
         >
@@ -50,7 +52,7 @@ const Navbar = () => {
             to="/addCraft"
             className={({ isActive }) =>
               isActive
-                ? 'font-bold text-lg  border-2 border-[#6dd79f] rounded-xl'
+                ? 'font-semibold text-lg border-2  border-blue-200  rounded-xl'
                 : ' text-lg'
             }
           >
@@ -67,7 +69,7 @@ const Navbar = () => {
             to="/myArt"
             className={({ isActive }) =>
               isActive
-                ? 'font-bold text-lg  border-2 border-[#6dd79f] rounded-xl'
+                ? 'font-semibold text-lg  border-2  border-blue-200 rounded-xl'
                 : ' text-lg'
             }
           >
@@ -109,9 +111,10 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className="btn btn-ghost text-xl lg:text-2xl font-bold text-[#6dd79f]"
+          className="btn btn-ghost text-xl lg:text-2xl font-bold text-[#1CB5E0]"
         >
-          name jana nei
+          {' '}
+          <Lottie animationData={craft} loop={true} /> Craft Haven
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -131,7 +134,7 @@ const Navbar = () => {
 
           {/* sun icon */}
           <svg
-            className="swap-off fill-current w-10 h-10"
+            className="swap-off text-info fill-current w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -140,7 +143,7 @@ const Navbar = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-on fill-current w-10 h-10"
+            className="swap-on text-info fill-current w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -149,7 +152,7 @@ const Navbar = () => {
         </label>
         {user ? (
           <div
-            className="tooltip tooltip-left tooltip-accent text-lg font-bold"
+            className="tooltip tooltip-left tooltip-info text-lg font-bold"
             data-tip={user?.displayName || 'user name not found'}
           >
             <button>
