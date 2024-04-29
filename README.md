@@ -1,10 +1,8 @@
-# Art Haven
-
 Welcome to Art Haven, your sanctuary for all things art and craft.
 
 ## Visit the Live Site
 
-[Art Haven](#)
+Visit the live site: [Craft Haven](https://assignment-10-7eeb4.web.app/)
 
 ## Crafted with Passion, Inspired by Creativity
 
