@@ -6,7 +6,7 @@ const AllArtcraft = () => {
   const crafts = useLoaderData();
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto mb-10">
       <table className="table">
         {/* head */}
         <thead>
@@ -14,7 +14,8 @@ const AllArtcraft = () => {
             <th>Name</th>
             <th>Price & Rating</th>
             <th>Stock Status</th>
-            <th></th>
+            <th>Customization</th>
+            <th>Processing Time</th>
           </tr>
         </thead>
         {crafts.map((craft, index) => (

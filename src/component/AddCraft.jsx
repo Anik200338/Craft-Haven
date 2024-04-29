@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
@@ -56,14 +57,14 @@ const AddCraft = () => {
   };
 
   return (
-    <div className="bg-[#F4F3F0] p-24">
-      <h2 className="text-3xl font-extrabold text-center mb-5">AddCraft</h2>
+    <div className="bg-info rounded-2xl p-24 mb-20">
+      <h2 className="text-3xl font-extrabold text-center mb-5">Add Craft</h2>
       <form onSubmit={handleAddCraft}>
         {/* form name and quantity row */}
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text"> image </span>
+              <span className="label-text font-bold"> Image </span>
             </label>
             <label className="input-group">
               <input
@@ -76,7 +77,7 @@ const AddCraft = () => {
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text"> Item name</span>
+              <span className="label-text font-bold"> Item name</span>
             </label>
             <label className="input-group">
               <input
@@ -92,7 +93,7 @@ const AddCraft = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">Subcategory Name</span>
+              <span className="label-text font-bold">Subcategory Name</span>
             </label>
             <label className="">
               <select
@@ -113,7 +114,7 @@ const AddCraft = () => {
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text">Short description</span>
+              <span className="label-text font-bold">Short description</span>
             </label>
             <label className="input-group">
               <input
@@ -129,7 +130,7 @@ const AddCraft = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">price</span>
+              <span className="label-text font-bold">Price</span>
             </label>
             <label className="input-group">
               <input
@@ -142,7 +143,7 @@ const AddCraft = () => {
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text">rating</span>
+              <span className="label-text font-bold">Rating</span>
             </label>
             <label className="input-group">
               <input
@@ -158,7 +159,7 @@ const AddCraft = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">customization</span>
+              <span className="label-text font-bold">Customization</span>
             </label>
             <label className="input-group">
               <input
@@ -171,7 +172,7 @@ const AddCraft = () => {
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text">processing_time</span>
+              <span className="label-text font-bold">Processing_time</span>
             </label>
             <label className="input-group">
               <input
@@ -187,7 +188,7 @@ const AddCraft = () => {
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
             <label className="label">
-              <span className="label-text">stockStatus</span>
+              <span className="label-text font-bold">StockStatus</span>
             </label>
             <label className="input-group">
               <input
@@ -200,7 +201,7 @@ const AddCraft = () => {
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text">User Email</span>
+              <span className="label-text font-bold">User Email</span>
             </label>
             <label className="input-group">
               <input
@@ -218,7 +219,7 @@ const AddCraft = () => {
         <div className="mb-8">
           <div className="form-control w-full">
             <label className="label">
-              <span className="label-text">User Name</span>
+              <span className="label-text font-bold">User Name</span>
             </label>
             <label className="input-group">
               <input
@@ -232,7 +233,7 @@ const AddCraft = () => {
             </label>
           </div>
         </div>
-        <input type="submit" value="AddCraft" className="btn btn-block" />
+        <input type="submit" value="Add Craft" className="btn btn-block" />
       </form>
     </div>
   );

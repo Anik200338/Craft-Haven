@@ -2,7 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CraftTbody = ({ Craft, index }) => {
-  const { Itemname, _id, price, rating, subcategory_Name, stockStatus } = Craft;
+  const {
+    Itemname,
+    _id,
+    price,
+    rating,
+    subcategory_Name,
+    stockStatus,
+    customization,
+    processing_time,
+  } = Craft;
   return (
     <tbody>
       {/* row 1 */}
@@ -24,9 +33,13 @@ const CraftTbody = ({ Craft, index }) => {
           <span className="badge badge-ghost badge-sm">{rating}</span>
         </td>
         <td>{stockStatus}</td>
+        <td>{customization}</td>
+        <td>{processing_time}</td>
         <th>
           <Link to={`/craft/${_id}`}>
-            <button className="btn btn-ghost btn-xs">details</button>
+            <button className="btn btn-ghost btn-xs font-bold">
+              View Details
+            </button>
           </Link>
         </th>
       </tr>

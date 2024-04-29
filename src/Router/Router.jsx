@@ -44,7 +44,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/craft/:id',
-        element: <Singlecraft></Singlecraft>,
+        element: (
+          <PrivateRoute>
+            <Singlecraft></Singlecraft>,
+          </PrivateRoute>
+        ),
       },
       {
         path: '/Update/:id',

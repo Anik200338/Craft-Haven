@@ -1,5 +1,7 @@
 import Baner from '../component/Baner';
+import Coustomers from '../component/Coustomers';
 import CraftItemsSection from '../component/CraftItemsSection';
+import Members from '../component/Members';
 import Section from '../component/Section';
 import SectionTwo from '../component/SectionTwo';
 import Subcategory from '../component/Subcategory';
@@ -13,6 +15,8 @@ const Home = () => {
         <CraftItemsSection></CraftItemsSection>
         <SectionTwo></SectionTwo>
         <Subcategory></Subcategory>
+        <Members></Members>
+        <Coustomers></Coustomers>
       </div>
     </div>
   );
