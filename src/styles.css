@@ -2,6 +2,7 @@
   margin-top: 20px;
   width: 100%;
   height: 100%;
+  border-radius: 50px;
 }
 
 .swiper-slide {
@@ -13,6 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50px;
 }
 
 .swiper-slide img {
@@ -20,31 +22,5 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.rectangle-background {
-  background-image: url('../src/assets/house-1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px;
-  background-size: cover; /* or background-size: 100% 100%; */
-  background-repeat: no-repeat;
-  min-height: 700px;
-}
-.rectangle-background2 {
-  background-image: url('../src/assets/house-2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px;
-  background-size: cover; /* or background-size: 100% 100%; */
-  background-repeat: no-repeat;
-  min-height: 700px;
-}
-.rectangle-background3 {
-  background-image: url('../src/assets/house-3.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 20px;
-  background-size: cover; /* or background-size: 100% 100%; */
-  background-repeat: no-repeat;
-  min-height: 700px;
+  border-radius: 50px;
 }

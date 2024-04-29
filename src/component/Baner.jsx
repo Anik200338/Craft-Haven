@@ -1,4 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Typewriter } from 'react-simple-typewriter';
+import { Fade } from 'react-awesome-reveal';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -37,20 +39,39 @@ const Baner = () => {
                 backgroundPosition: 'center',
               }}
             >
-              <div className="hero-overlay bg-opacity-40 rounded-3xl"></div>
-              <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md animate__heartBeat">
+              <div className="hero-overlay bg-opacity-30 rounded-3xl"></div>
+              <div className="hero-content text-center  text-neutral-content">
+                <div className="max-w-md ">
                   <h1 className="mb-5 text-4xl font-bold">
                     <span className="text-info">
-                      Discover Artistic Masterpieces
+                      Discover{' '}
+                      <span>
+                        <Typewriter
+                          words={[
+                            'Artistic Masterpieces',
+                            'Artistic Expression',
+                            'Creative Innovation',
+                            'Visual Storytelling',
+                          ]}
+                          loop={5}
+                          cursor
+                          cursorStyle="_"
+                          typeSpeed={70}
+                          deleteSpeed={50}
+                          delaySpeed={1000}
+                        />
+                      </span>
                     </span>
                   </h1>
-                  <p className="mb-5 text-xl">
-                    Immerse yourself in the world of artistry and craftsmanship
-                    with our curated collection. From intricately designed
-                    interiors to meticulously crafted exteriors, explore
-                    unparalleled creativity in every detail.
-                  </p>
+                  <Fade direction="left">
+                    <p className="mb-5 text-xl">
+                      Immerse yourself in the world of artistry and
+                      craftsmanship with our curated collection. From
+                      intricately designed interiors to meticulously crafted
+                      exteriors, explore unparalleled creativity in every
+                      detail.
+                    </p>
+                  </Fade>
                 </div>
               </div>
             </div>
