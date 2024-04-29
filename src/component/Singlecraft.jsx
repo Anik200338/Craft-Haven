@@ -9,7 +9,7 @@ const Singlecraft = () => {
 
   useEffect(() => {
     // Set loading to true when starting to fetch data
-    fetch(`http://localhost:5000/Single/${id}`)
+    fetch(`https://assignment-10-server-five-delta.vercel.app/Single/${id}`)
       .then(res => res.json())
       .then(data => {
         setCraft(data);

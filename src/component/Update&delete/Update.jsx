@@ -9,7 +9,7 @@ const Update = () => {
   const [craft, setCraft] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/AddCraft/${id}`)
+    fetch(`https://assignment-10-server-five-delta.vercel.app/AddCraft/${id}`)
       .then(res => res.json())
       .then(data => {
         setCraft(data);
@@ -40,13 +40,16 @@ const Update = () => {
       processing_time,
       stockStatus,
     };
-    fetch(`http://localhost:5000/updateCraft/${id}`, {
-      method: 'PUT',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(UpdateCraft),
-    })
+    fetch(
+      `https://assignment-10-server-five-delta.vercel.app/updateCraft/${id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify(UpdateCraft),
+      }
+    )
       .then(res => res.json())
       .then(data => {
         setCraft(data);

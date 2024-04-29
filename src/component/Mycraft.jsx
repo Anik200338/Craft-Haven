@@ -12,7 +12,9 @@ const Mycraft = () => {
   const [control, setcontrol] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/craft/${user?.email}`)
+    fetch(
+      `https://assignment-10-server-five-delta.vercel.app/craft/${user?.email}`
+    )
       .then(res => res.json())
       .then(data => {
         setItems(data);
@@ -43,9 +45,12 @@ const Mycraft = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
-          method: 'DELETE',
-        })
+        fetch(
+          `https://assignment-10-server-five-delta.vercel.app/delete/${id}`,
+          {
+            method: 'DELETE',
+          }
+        )
           .then(res => res.json())
           .then(data => {
             if (data.deletedCount > 0) {

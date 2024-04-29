@@ -9,7 +9,7 @@ const SingleSub = () => {
   const [craftOne, setCraftOne] = useState({});
   console.log(craftOne);
   useEffect(() => {
-    fetch(`http://localhost:5000/category/${id}`)
+    fetch(`https://assignment-10-server-five-delta.vercel.app/category/${id}`)
       .then(res => res.json())
       .then(data => {
         setCraftOne(data);
@@ -21,7 +21,9 @@ const SingleSub = () => {
   const [item, setItem] = useState([]);
   console.log(item);
   useEffect(() => {
-    fetch(`http://localhost:5000/subcategory/${craftOne?.subcategory_Name}`)
+    fetch(
+      `https://assignment-10-server-five-delta.vercel.app/subcategory/${craftOne?.subcategory_Name}`
+    )
       .then(res => res.json())
       .then(data => {
         setItem(data);

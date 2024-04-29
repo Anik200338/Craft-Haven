@@ -35,7 +35,7 @@ const AddCraft = () => {
     };
     console.log(newCraft);
     // send data to the server
-    fetch('http://localhost:5000/AddCraft', {
+    fetch('https://assignment-10-server-five-delta.vercel.app/AddCraft', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

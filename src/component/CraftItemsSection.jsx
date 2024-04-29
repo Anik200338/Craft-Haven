@@ -11,7 +11,7 @@ const CraftItemsSection = () => {
   const limitedCrafts = crafts.slice(0, 6);
 
   // useEffect(() => {
-  //   fetch(`http://localhost:5000/mycraft/${user?.email}`)
+  //   fetch(`https://assignment-10-server-five-delta.vercel.app/mycraft/${user?.email}`)
   //     .then(res => res.json())
   //     .then(data => {
   //       setitem(data);

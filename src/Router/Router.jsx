@@ -24,14 +24,16 @@ const router = createBrowserRouter([
         loader: async () => {
           // Fetch data from 'fakedata.json'
           const fakeDataResponse = await fetch(
-            'http://localhost:5000/AddCraft'
+            'https://assignment-10-server-five-delta.vercel.app/AddCraft'
           );
           const fakeData = await fakeDataResponse.json();
 
-          const craftsResponse = await fetch('http://localhost:5000/AddCraft');
+          const craftsResponse = await fetch(
+            'https://assignment-10-server-five-delta.vercel.app/AddCraft'
+          );
           const crafts = await craftsResponse.json();
           const AddSubcategory = await fetch(
-            'http://localhost:5000/Subcategory'
+            'https://assignment-10-server-five-delta.vercel.app/Subcategory'
           );
           const Subcategorys = await AddSubcategory.json();
 
@@ -77,7 +79,8 @@ const router = createBrowserRouter([
       {
         path: '/allCraft',
         element: <AllArtcraft></AllArtcraft>,
-        loader: () => fetch('http://localhost:5000/AddCraft'),
+        loader: () =>
+          fetch('https://assignment-10-server-five-delta.vercel.app/AddCraft'),
       },
       {
         path: '/addCraft',
