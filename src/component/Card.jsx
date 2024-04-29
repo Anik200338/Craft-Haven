@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Card = ({ Craft }) => {
-  const { image, } = Craft;
+  const { image } = Craft;
   return (
-    <div className="card card-compact lg:w-96 h-96 bg-base-100 shadow-xl">
+    <div className="card card-compact md:w-96 h-96 bg-base-100 shadow-xl">
       <figure>
         <img src={image} alt="Shoes" />
       </figure>

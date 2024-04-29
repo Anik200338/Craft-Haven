@@ -41,16 +41,15 @@ const Baner = () => {
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md animate__heartBeat">
                   <h1 className="mb-5 text-4xl font-bold">
-                    <span className="text-[#6dd79f]">
-                      Discover Exclusivity:
+                    <span className="text-info">
+                      Discover Artistic Masterpieces
                     </span>
-                    <br />
-                    Luxury Real Estate at its Finest
                   </h1>
                   <p className="mb-5 text-xl">
-                    Explore luxury living with our exclusive real estate
-                    collection. From beachfront villas to opulent mansions,
-                    discover unparalleled elegance.
+                    Immerse yourself in the world of artistry and craftsmanship
+                    with our curated collection. From intricately designed
+                    interiors to meticulously crafted exteriors, explore
+                    unparalleled creativity in every detail.
                   </p>
                 </div>
               </div>
