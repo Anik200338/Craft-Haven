@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import Baner from '../component/Baner';
 import Coustomers from '../component/Coustomers';
 import CraftItemsSection from '../component/CraftItemsSection';
@@ -10,6 +11,9 @@ const Home = () => {
   return (
     <div>
       <div className="p-5">
+        <Helmet>
+          <title>Craft Haven | Home</title>
+        </Helmet>
         <Baner></Baner>
         <Section></Section>
         <CraftItemsSection></CraftItemsSection>

@@ -42,7 +42,7 @@ const Navbar = () => {
           }
         >
           {' '}
-          AllArt &craft Items
+          All Items
         </NavLink>
       </li>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
             }
           >
             {' '}
-            AddCraftItem
+            Add Item
           </NavLink>
         </li>
       ) : (
@@ -74,7 +74,7 @@ const Navbar = () => {
             }
           >
             {' '}
-            MyArt&CraftList
+            My List
           </NavLink>
         </li>
       ) : (

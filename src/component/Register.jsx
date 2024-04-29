@@ -5,6 +5,7 @@ import { AuthContext } from './AuthProvider/AuthProvider';
 
 import toast, { Toaster } from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const {
@@ -48,6 +49,9 @@ const Register = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Craft Haven | Register</title>
+      </Helmet>
       <div className="hero min-h-screen bg-[url('https://i.ibb.co/b60WJLZ/data-security-threat-1.png')] rounded-3xl  w-full mb-20">
         <div className="hero-content flex-col lg:flex w-3/4">
           <div className="text-center lg:text-left">

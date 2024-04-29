@@ -3,6 +3,7 @@ import { AuthContext } from './AuthProvider/AuthProvider';
 
 import AllCraft from './AllCraft';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const Mycraft = () => {
   const { user } = useContext(AuthContext);
@@ -58,6 +59,9 @@ const Mycraft = () => {
   return (
     <div>
       <div className="text-center">
+        <Helmet>
+          <title>Craft Haven | My Item</title>
+        </Helmet>
         {/* Dropdown menu for filtering */}
         <select
           className="bg-info h-10 rounded-xl font-bold pl-2 "

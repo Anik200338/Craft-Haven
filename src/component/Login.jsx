@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import SocialLogin from './socialLogin';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -37,6 +38,9 @@ const Login = () => {
 
   return (
     <div className="">
+      <Helmet>
+        <title>Craft Haven | Login</title>
+      </Helmet>
       <div className="hero min-h-screen bg-[url('https://i.ibb.co/wzLs0gK/data-security-threat.png')] rounded-3xl  w-full mb-20">
         <div className="hero-content flex-col lg:flex rounded-2xl w-3/4">
           <div className="text-center  lg:text-left">

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
@@ -58,6 +59,9 @@ const AddCraft = () => {
 
   return (
     <div className="bg-info rounded-2xl p-20 m-20">
+      <Helmet>
+        <title>Craft Haven | Add Item</title>
+      </Helmet>
       <h2 className="text-3xl font-extrabold text-center mb-5">Add Craft</h2>
       <form onSubmit={handleAddCraft}>
         {/* form name and quantity row */}

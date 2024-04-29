@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -65,6 +66,9 @@ const Update = () => {
   return (
     <div>
       <div>
+        <Helmet>
+          <title>Craft Haven | Update</title>
+        </Helmet>
         <div className="bg-warning rounded-2xl p-20 m-20">
           <h2 className="text-3xl font-extrabold text-center mb-5">
             Update Craft

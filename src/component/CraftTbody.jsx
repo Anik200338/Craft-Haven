@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 const CraftTbody = ({ Craft, index }) => {
@@ -14,6 +15,9 @@ const CraftTbody = ({ Craft, index }) => {
   } = Craft;
   return (
     <tbody>
+      <Helmet>
+        <title>Craft Haven | All Item</title>
+      </Helmet>
       {/* row 1 */}
       <tr>
         <td>
