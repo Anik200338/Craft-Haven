@@ -2,25 +2,30 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const AllCraft = ({ Craft, handleDelete }) => {
-  const { image, item_name, _id, price, rating, customization } = Craft;
+  const { image, _id, price, rating, customization, Itemname, stockStatus } =
+    Craft;
 
   return (
-    <div className="card card-compact lg:w-96 h-96 bg-base-100 shadow-xl">
+    <div className="card card-compact  h-96 bg-base-100 shadow-2xl">
       <figure>
         <img src={image} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title font-bold">{item_name}</h2>
-        <p className="text-lg ">{}</p>
-        <p className="">{rating}</p>
-        <h1 className="text-lg font-bold">{price}</h1>
+        <h2 className="card-title font-bold">{Itemname}</h2>
+        <h1 className="text-lg font-semibold">{price}</h1>
+        <h1 className="text-xl font-bold text-gray-400">{stockStatus}</h1>
         <div className="card-actions justify-between">
-          <button className="btn">{customization}</button>
+          <button className="btn bg-info">
+            Customization : {customization}
+          </button>
+          <button className="btn bg-info">{rating}</button>
+        </div>
+        <div className="card-actions justify-between">
           <Link to={`/Update/${_id}`}>
-            <button className="btn btn-accent">U</button>
+            <button className="btn btn-warning">Update</button>
           </Link>
-          <button onClick={() => handleDelete(_id)} className="btn btn-accent">
-            x
+          <button onClick={() => handleDelete(_id)} className="btn btn-error">
+            Delete
           </button>
         </div>
       </div>

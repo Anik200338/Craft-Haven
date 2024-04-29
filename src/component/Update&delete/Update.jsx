@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Update = () => {
   const { id } = useParams();
@@ -50,20 +51,30 @@ const Update = () => {
         setCraft(data);
         // Set loading to false when data is fetched
         console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Updated Successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool',
+          });
+        }
       });
     form.reset();
   };
   return (
     <div>
       <div>
-        <div className="bg-[#F4F3F0] p-24">
-          <h2 className="text-3xl font-extrabold text-center mb-5">AddCraft</h2>
+        <div className="bg-warning rounded-2xl p-20 m-20">
+          <h2 className="text-3xl font-extrabold text-center mb-5">
+            Update Craft
+          </h2>
           <form onSubmit={handleUpdate}>
             {/* form name and quantity row */}
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
                 <label className="label">
-                  <span className="label-text"> image </span>
+                  <span className="label-text font-bold"> Image </span>
                 </label>
                 <label className="input-group">
                   <input
@@ -77,7 +88,7 @@ const Update = () => {
               </div>
               <div className="form-control md:w-1/2 ml-4">
                 <label className="label">
-                  <span className="label-text"> Item name</span>
+                  <span className="label-text font-bold"> Item name</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -94,7 +105,7 @@ const Update = () => {
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
                 <label className="label">
-                  <span className="label-text">Subcategory Name</span>
+                  <span className="label-text font-bold">Subcategory Name</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -108,7 +119,9 @@ const Update = () => {
               </div>
               <div className="form-control md:w-1/2 ml-4">
                 <label className="label">
-                  <span className="label-text">Short description</span>
+                  <span className="label-text font-bold">
+                    Short description
+                  </span>
                 </label>
                 <label className="input-group">
                   <input
@@ -125,7 +138,7 @@ const Update = () => {
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
                 <label className="label">
-                  <span className="label-text">price</span>
+                  <span className="label-text font-bold">Price</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -139,7 +152,7 @@ const Update = () => {
               </div>
               <div className="form-control md:w-1/2 ml-4">
                 <label className="label">
-                  <span className="label-text">rating</span>
+                  <span className="label-text font-bold">Rating</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -156,7 +169,7 @@ const Update = () => {
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
                 <label className="label">
-                  <span className="label-text">customization</span>
+                  <span className="label-text font-bold">Customization</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -170,7 +183,7 @@ const Update = () => {
               </div>
               <div className="form-control md:w-1/2 ml-4">
                 <label className="label">
-                  <span className="label-text">processing_time</span>
+                  <span className="label-text font-bold">Processing Time</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -187,7 +200,7 @@ const Update = () => {
             <div className="md:flex mb-8">
               <div className="form-control w-full">
                 <label className="label">
-                  <span className="label-text">stockStatus</span>
+                  <span className="label-text font-bold">StockStatus</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -200,7 +213,11 @@ const Update = () => {
                 </label>
               </div>
             </div>
-            <input type="submit" value="AddCraft" className="btn btn-block" />
+            <input
+              type="submit"
+              value="Update Craft"
+              className="btn btn-block"
+            />
           </form>
         </div>
       </div>

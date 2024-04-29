@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from './AuthProvider/AuthProvider';
 
 import AllCraft from './AllCraft';
+import Swal from 'sweetalert2';
 
 const Mycraft = () => {
   const { user } = useContext(AuthContext);
@@ -31,24 +32,49 @@ const Mycraft = () => {
     );
   });
   const handleDelete = id => {
-    fetch(`http://localhost:5000/delete/${id}`, {
-      method: 'DELETE',
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.deletedCount > 0) {
-          setcontrol(!control);
-        }
-      });
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then(result => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/delete/${id}`, {
+          method: 'DELETE',
+        })
+          .then(res => res.json())
+          .then(data => {
+            if (data.deletedCount > 0) {
+              Swal.fire('Deleted!', 'Your card has been deleted.', 'success');
+              setcontrol(!control);
+            }
+          });
+      }
+    });
   };
   return (
     <div>
-      {/* Dropdown menu for filtering */}
-      <select value={filterValue} onChange={handleFilterChange}>
-        <option value="">All Crafts</option>
-        <option value="yes">Customized</option>
-        <option value="no">Not Customized</option>
-      </select>
+      <div className="text-center">
+        {/* Dropdown menu for filtering */}
+        <select
+          className="bg-info h-10 rounded-xl font-bold pl-2 "
+          value={filterValue}
+          onChange={handleFilterChange}
+        >
+          <option className="font-bold" value="">
+            All Crafts
+          </option>
+          <option className="font-bold" value="yes">
+            Customized
+          </option>
+          <option className="font-bold" value="no">
+            Not Customized
+          </option>
+        </select>
+      </div>
 
       {/* Render filtered items */}
       <div

@@ -46,13 +46,17 @@ const router = createBrowserRouter([
         path: '/craft/:id',
         element: (
           <PrivateRoute>
-            <Singlecraft></Singlecraft>,
+            <Singlecraft></Singlecraft>
           </PrivateRoute>
         ),
       },
       {
         path: '/Update/:id',
-        element: <Update></Update>,
+        element: (
+          <PrivateRoute>
+            <Update></Update>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/Subcategory/:id',

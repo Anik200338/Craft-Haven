@@ -18,7 +18,7 @@ const Card = ({ Craft }) => {
   } = Craft;
   return (
     <div className="card card-compact  h-[500px] bg-base-100 shadow-2xl">
-      <figure className="h-">
+      <figure>
         <img src={image} alt="Shoes" />
       </figure>
       <div className="card-body">

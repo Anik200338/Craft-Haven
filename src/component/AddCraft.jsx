@@ -47,7 +47,7 @@ const AddCraft = () => {
         if (data.insertedId) {
           Swal.fire({
             title: 'success!',
-            text: 'User Added successfully',
+            text: 'Added successfully',
             icon: 'success',
             confirmButtonText: 'Cool',
           });
@@ -57,7 +57,7 @@ const AddCraft = () => {
   };
 
   return (
-    <div className="bg-info rounded-2xl p-24 mb-20">
+    <div className="bg-info rounded-2xl p-20 m-20">
       <h2 className="text-3xl font-extrabold text-center mb-5">Add Craft</h2>
       <form onSubmit={handleAddCraft}>
         {/* form name and quantity row */}
