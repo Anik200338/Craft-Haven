@@ -58,7 +58,7 @@ const AddCraft = () => {
   };
 
   return (
-    <div className="bg-info rounded-2xl p-20 m-20">
+    <div className="bg-info rounded-2xl p-5 lg:p-20 lg:m-20">
       <Helmet>
         <title>Craft Haven | Add Item</title>
       </Helmet>
@@ -79,7 +79,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 lg:lg:ml-4">
             <label className="label">
               <span className="label-text font-bold"> Item name</span>
             </label>
@@ -116,7 +116,7 @@ const AddCraft = () => {
               </select>
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 lg:ml-4">
             <label className="label">
               <span className="label-text font-bold">Short description</span>
             </label>
@@ -145,7 +145,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 lg:ml-4">
             <label className="label">
               <span className="label-text font-bold">Rating</span>
             </label>
@@ -174,7 +174,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 lg:ml-4">
             <label className="label">
               <span className="label-text font-bold">Processing_time</span>
             </label>
@@ -203,7 +203,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 lg:ml-4">
             <label className="label">
               <span className="label-text font-bold">User Email</span>
             </label>

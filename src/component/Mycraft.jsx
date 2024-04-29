@@ -58,7 +58,7 @@ const Mycraft = () => {
   };
   return (
     <div>
-      <div className="text-center">
+      <div className="text-center mb-5">
         <Helmet>
           <title>Craft Haven | My Item</title>
         </Helmet>
