@@ -30,8 +30,10 @@ const SingleSub = () => {
   }, [craftOne]);
 
   return (
-    <div>
-      <h2>this is single sub{item.length}</h2>
+    <div
+      className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20 lg:p-20"
+      data-aos="fade-down-right"
+    >
       {item.map(craft => (
         <Card key={craft.id} Craft={craft} />
       ))}
