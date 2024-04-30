@@ -72,7 +72,7 @@ const Update = () => {
         <Helmet>
           <title>Craft Haven | Update</title>
         </Helmet>
-        <div className="bg-warning rounded-2xl p-20 m-20">
+        <div className="bg-warning rounded-2xl lg:p-20 p-5 lg:m-20">
           <h2 className="text-3xl font-extrabold text-center mb-5">
             Update Craft
           </h2>
@@ -93,7 +93,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 lg:ml-4">
                 <label className="label">
                   <span className="label-text font-bold"> Item name</span>
                 </label>
@@ -124,7 +124,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 lg:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">
                     Short description
@@ -157,7 +157,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 lg:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Rating</span>
                 </label>
@@ -188,7 +188,7 @@ const Update = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 lg:ml-4">
                 <label className="label">
                   <span className="label-text font-bold">Processing Time</span>
                 </label>
