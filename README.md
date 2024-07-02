@@ -22,15 +22,11 @@ Visit the live site: [Craft Haven](https://assignment-10-7eeb4.web.app/)
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-Navigate to the project directory:
-bash
-Copy code
-cd craft-connect
-Install dependencies:
-bash
-Copy code
-npm install
-Start the development server:
-bash
-Copy code
-npm run dev
+2.**Navigate to the project directory:**
+  ```bash
+cd craft-haven
+
+
+
+
+
