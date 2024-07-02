@@ -23,8 +23,8 @@ Visit the live site: [Craft Haven](https://assignment-10-7eeb4.web.app/)
    ```bash
    git clone <repository-url>
 2.**Navigate to the project directory:**
-  ```bash
-cd craft-haven
+<cd craft-haven>
+
 
 
 
