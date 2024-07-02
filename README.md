@@ -1,26 +1,28 @@
-Welcome to Art Haven, your sanctuary for all things art and craft.
+
+# Craft Haven
+
+## Project Overview
+- **Concept:** Craft Haven is an e-commerce platform dedicated to handmade crafts, allowing artisans to showcase and sell their products online.
+- **Problem Solved:** It provides a marketplace for craft sellers and buyers, enhancing visibility for artisans and offering unique products to customers.
 
 ## Visit the Live Site
 
 Visit the live site: [Craft Haven](https://assignment-10-7eeb4.web.app/)
 
-## Crafted with Passion, Inspired by Creativity
+## Features
+- **Product Listings:** Detailed pages for each craft item with images, descriptions, and prices.
+- **User Authentication:** Secure registration and login system for buyers and sellers.
+- **Shopping Cart:** Allows users to add items to the cart, view their selections, and proceed to checkout.
+- 
+- ## Technologies Used
+- React
+- Firebase
+- Tailwind
 
-- **Artistic Showcase**: Immerse yourself in a diverse collection of artworks
-  spanning various mediums and styles, curated to ignite your imagination.
-- **Creative Resources**: Access a wealth of resources including tutorials,
-  guides, and tips to nurture your artistic journey and expand your skills.
-- **Community Engagement**: Connect with fellow artists, share your creations,
-  and engage in meaningful discussions to foster growth and collaboration.
-- **Inspiration Hub**: Discover stories behind the art, artist spotlights, and
-  featured works that celebrate the beauty and depth of human creativity.
-- **Interactive Workshops**: Participate in live workshops and events conducted
-  by seasoned artists, offering hands-on learning experiences and valuable
-  insights.
 
 ## NPM Packages Used
 
-**AOS**: Implement captivating scroll animations with AOS, enhancing user
+- **AOS**: Implement captivating scroll animations with AOS, enhancing user
 engagement and visual appeal as elements come into view.
 
 - **Firebase**: Leverage the power of Firebase for seamless data storage,
