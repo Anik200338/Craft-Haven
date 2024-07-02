@@ -19,11 +19,11 @@ Visit the live site: [Craft Haven](https://assignment-10-7eeb4.web.app/)
 - Firebase
 - Tailwind
 ## How to Run Locally
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-2.**Navigate to the project directory:**
-<cd craft-haven>
+1. **Clone the repository:  git clone <repository-url> **
+2. **Navigate to the project directory: cd craft-haven**
+3. 
+
+
 
 
 
